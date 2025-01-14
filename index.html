@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Sneakers Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-container">
+                <span class="logo-icon">👟</span>
+                <span class="logo-text">
+                    <span class="sneaker">Sneaker</span>
+                    <span class="spot">Spot</span>
+                </span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search sneakers...">
+                <button class="search-btn">
+                    <span class="material-icons">search</span>
+                </button>
+            </div>
+            <div class="cart-icon">
+                <span class="material-icons">shopping_cart</span>
+                <span class="cart-count">0</span>
+            </div>
+            <div id="authSection">
+                <a href="login.html" class="login-btn" id="loginBtn">Login</a>
+                <div class="user-avatar" id="userAvatar" style="display: none;">
+                    <span class="user-initial"></span>
+                    <div class="user-menu" id="userMenu">
+                        <div class="user-info">
+                            <span class="material-icons">account_circle</span>
+                            <h3 id="userNameDisplay">User Name</h3>
+                        </div>
+                        <div class="menu-options">
+                            <a href="#" class="menu-option">
+                                <span class="material-icons">shopping_bag</span>
+                                My Orders
+                            </a>
+                            <a href="#" class="menu-option">
+                                <span class="material-icons">favorite</span>
+                                Wishlist
+                            </a>
+                            <a href="#" class="menu-option">
+                                <span class="material-icons">local_shipping</span>
+                                Track Order
+                            </a>
+                            <a href="#" class="menu-option">
+                                <span class="material-icons">account_balance_wallet</span>
+                                Wallet
+                            </a>
+                            <a href="#" class="menu-option">
+                                <span class="material-icons">settings</span>
+                                Settings
+                            </a>
+                            <div class="menu-divider"></div>
+                            <a href="#" class="menu-option logout-option" onclick="handleLogout()">
+                                <span class="material-icons">logout</span>
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Sneaker 1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3" alt="Sneaker 2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772" alt="Sneaker 3">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="sliding-text">Premium Sneakers</h1>
+                <div class="text-slider">
+                    <span>Style</span>
+                    <span>Comfort</span>
+                    <span>Innovation</span>
+                </div>
+                <button class="explore-btn" onclick="window.location.href='collection.html'">Explore Collection</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="trending">
+        <h2>What's Trending</h2>
+        <div class="trending-scroll">
+            <div class="trending-grid">
+                <div class="trend-card">
+                    <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634" alt="Trending 1">
+                    <div class="trend-content">
+                        <h3>Air Max Collection</h3>
+                        <p>$199</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="trend-card">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a" alt="Trending 2">
+                    <div class="trend-content">
+                        <h3>Ultra Boost Series</h3>
+                        <p>$189</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="trend-card">
+                    <img src="https://images.unsplash.com/photo-1584735174965-48c48d7edfde" alt="Trending 3">
+                    <div class="trend-content">
+                        <h3>Sport Elite</h3>
+                        <p>$159</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="trend-card">
+                    <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3" alt="Trending 4">
+                    <div class="trend-content">
+                        <h3>Street Runner</h3>
+                        <p>$169</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="trend-card">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519" alt="Trending 5">
+                    <div class="trend-content">
+                        <h3>Urban Classic</h3>
+                        <p>$149</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="trend-card">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772" alt="Trending 6">
+                    <div class="trend-content">
+                        <h3>Pro Runner</h3>
+                        <p>$209</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="price-categories">
+        <h2>Shop By Price Range</h2>
+        <div class="category-grid">
+            <div class="category-card under3k">
+                <div class="category-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3" alt="Under 3000">
+                <div class="category-content">
+                    <h3>Under ₹3,000</h3>
+                    <p>Budget-friendly classics</p>
+                    <button class="category-btn">Explore</button>
+                </div>
+            </div>
+            <div class="category-card under5k">
+                <div class="category-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1579338559194-a162d19bf842" alt="Under 5000">
+                <div class="category-content">
+                    <h3>Under ₹5,000</h3>
+                    <p>Premium comfort</p>
+                    <button class="category-btn">Explore</button>
+                </div>
+            </div>
+            <div class="category-card premium">
+                <div class="category-overlay"></div>
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Premium">
+                <div class="category-content">
+                    <h3>Under ₹10,000</h3>
+                    <p>Luxury sneakers</p>
+                    <button class="category-btn">Explore</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-wrapper">
+            <div class="contact-header">
+                <h2>Get In Touch</h2>
+                <p>Let's talk about your sneaker needs</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <span class="material-icons">location_on</span>
+                        <h3>Visit Us</h3>
+                        <p>123 Sneaker Street</p>
+                        <p>Fashion District, NY 10001</p>
+                    </div>
+                    <div class="contact-card">
+                        <span class="material-icons">call</span>
+                        <h3>Call Us</h3>
+                        <p>+1 (234) 567-8900</p>
+                        <p>Mon-Fri, 9am-6pm</p>
+                    </div>
+                    <div class="contact-card">
+                        <span class="material-icons">mail</span>
+                        <h3>Email Us</h3>
+                        <p>hello@sneakerspot.com</p>
+                        <p>support@sneakerspot.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" required>
+                                <label>Your Name</label>
+                                <span class="material-icons">person</span>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" required>
+                                <label>Your Email</label>
+                                <span class="material-icons">email</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <textarea required></textarea>
+                            <label>Your Message</label>
+                            <span class="material-icons">message</span>
+                        </div>
+                        <button type="submit" class="send-btn">
+                            <span class="default">Send Message</span>
+                            <span class="success">
+                                <span class="material-icons">check</span> Sent
+                            </span>
+                            <div class="loader"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-popup" id="cartPopup">
+        <div class="cart-content">
+            <h3>Shopping Cart</h3>
+            <div class="cart-items"></div>
+            <div class="cart-total">
+                <p>Total: ₹<span id="cartTotal">0</span></p>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // Add this to your existing scripts
+        const userInitial = localStorage.getItem('userName') ? localStorage.getItem('userName')[0].toUpperCase() : 'G';
+        document.querySelector('.user-initial').textContent = userInitial;
+
+        // Cart popup toggle
+        document.querySelector('.cart-icon').addEventListener('click', () => {
+            document.getElementById('cartPopup').classList.toggle('active');
+        });
+
+        function handleLogout() {
+            if (confirm('Do you want to logout?')) {
+                localStorage.removeItem('isLoggedIn');
+                localStorage.removeItem('userName');
+                localStorage.removeItem('userEmail');
+                window.location.reload();
+            }
+        }
+
+        function checkAuthStatus() {
+            const loginBtn = document.getElementById('loginBtn');
+            const userAvatar = document.getElementById('userAvatar');
+            const userMenu = document.getElementById('userMenu');
+            const userInitial = document.querySelector('.user-initial');
+            const userNameDisplay = document.getElementById('userNameDisplay');
+            
+            if (localStorage.getItem('isLoggedIn')) {
+                loginBtn.style.display = 'none';
+                userAvatar.style.display = 'flex';
+                const name = localStorage.getItem('userName') || 'User';
+                
+                userInitial.textContent = name[0].toUpperCase();
+                userNameDisplay.textContent = name;
+                
+                // Toggle user menu on avatar click
+                userAvatar.onclick = function(e) {
+                    e.stopPropagation();
+                    userMenu.classList.toggle('active');
+                }
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!userAvatar.contains(e.target)) {
+                        userMenu.classList.remove('active');
+                    }
+                });
+            } else {
+                loginBtn.style.display = 'block';
+                userAvatar.style.display = 'none';
+            }
+        }
+
+        // Run on page load
+        document.addEventListener('DOMContentLoaded', checkAuthStatus);
+    </script>
+</body>
+</html>

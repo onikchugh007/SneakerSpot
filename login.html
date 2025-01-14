@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SneakerSpot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="auth.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <div class="auth-header">
+                <a href="index.html" class="logo">
+                    <div class="logo-container">
+                        <span class="logo-icon">👟</span>
+                        <span class="logo-text">
+                            <span class="sneaker">Sneaker</span>
+                            <span class="spot">Spot</span>
+                        </span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="auth-forms">
+                <!-- Login Form -->
+                <form id="loginForm" class="active">
+                    <h2>Welcome Back</h2>
+                    <div class="input-group">
+                        <span class="material-icons">email</span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-group">
+                        <span class="material-icons">lock</span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" class="auth-btn">Login</button>
+                    <p class="switch-form">Don't have an account? <a href="#" onclick="toggleForm('register')">Sign Up</a></p>
+                </form>
+
+                <!-- Register Form -->
+                <form id="registerForm">
+                    <h2>Create Account</h2>
+                    <div class="input-group">
+                        <span class="material-icons">person</span>
+                        <input type="text" required>
+                        <label>Full Name</label>
+                    </div>
+                    <div class="input-group">
+                        <span class="material-icons">email</span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-group">
+                        <span class="material-icons">lock</span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" class="auth-btn">Sign Up</button>
+                    <p class="switch-form">Already have an account? <a href="#" onclick="toggleForm('login')">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="auth.js"></script>
+</body>
+</html>

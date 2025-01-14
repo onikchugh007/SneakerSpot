@@ -1,0 +1,123 @@
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%);
+    padding: 2rem;
+}
+
+.auth-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.auth-header .logo-container {
+    transform: scale(1.2); /* Make logo slightly bigger */
+    margin: 0 auto;
+}
+
+.auth-header .logo:hover .logo-container {
+    transform: scale(1.3); /* Slightly bigger hover effect */
+}
+
+.auth-forms {
+    position: relative;
+}
+
+.auth-forms form {
+    display: none;
+}
+
+.auth-forms form.active {
+    display: block;
+}
+
+.auth-forms h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1rem;
+    padding-left: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.input-group label {
+    position: absolute;
+    left: 3rem;
+    top: 1rem;
+    color: #888;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.input-group .material-icons {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: var(--primary);
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: var(--primary);
+    font-size: 0.9rem;
+}
+
+.auth-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.auth-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 51, 102, 0.4);
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 2rem;
+    color: #888;
+}
+
+.switch-form a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}

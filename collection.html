@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Collection - SneakerSpot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="collection.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-container">
+                <span class="logo-icon">👟</span>
+                <span class="logo-text">
+                    <span class="sneaker">Sneaker</span>
+                    <span class="spot">Spot</span>
+                </span>
+            </div>
+        </a>
+        <div class="nav-actions">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search sneakers...">
+                <button class="search-btn">
+                    <span class="material-icons">search</span>
+                </button>
+            </div>
+            <div class="cart-icon">
+                <span class="material-icons">shopping_cart</span>
+                <span class="cart-count">0</span>
+            </div>
+            <div id="authSection">
+                <a href="login.html" class="login-btn" id="loginBtn">Login</a>
+                <div class="user-avatar" id="userAvatar" style="display: none;">
+                    <span class="user-initial"></span>
+                    <div class="user-menu" id="userMenu">
+                        <div class="user-info">
+                            <span class="material-icons">account_circle</span>
+                            <h3 id="userNameDisplay">User Name</h3>
+                        </div>
+                        <div class="menu-options">
+                            <a href="#" class="menu-option">
+                                <span class="material-icons">shopping_bag</span>
+                                My Orders
+                            </a>
+                            <a href="#" class="menu-option">
+                                <span class="material-icons">favorite</span>
+                                Wishlist
+                            </a>
+                            <a href="#" class="menu-option">
+                                <span class="material-icons">local_shipping</span>
+                                Track Order
+                            </a>
+                            <a href="#" class="menu-option">
+                                <span class="material-icons">account_balance_wallet</span>
+                                Wallet
+                            </a>
+                            <a href="#" class="menu-option">
+                                <span class="material-icons">settings</span>
+                                Settings
+                            </a>
+                            <div class="menu-divider"></div>
+                            <a href="#" class="menu-option logout-option" onclick="handleLogout()">
+                                <span class="material-icons">logout</span>
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="collection-container">
+        <div class="filters">
+            <h3>Sort By</h3>
+            <select id="priceFilter">
+                <option value="all">All Products</option>
+                <option value="newArrivals">What's New</option>
+                <option value="highToLow">Price: High to Low</option>
+                <option value="lowToHigh">Price: Low to High</option>
+            </select>
+        </div>
+
+        <div class="collection-grid" id="collectionGrid">
+            <!-- Products will be dynamically added here -->
+        </div>
+    </main>
+
+    <div class="product-modal" id="productModal">
+        <!-- Modal content will be dynamically inserted here -->
+    </div>
+
+    <div class="cart-popup" id="cartPopup">
+        <div class="cart-content">
+            <h3>Shopping Cart</h3>
+            <div class="cart-items"></div>
+            <div class="cart-total">
+                <p>Total: ₹<span id="cartTotal">0</span></p>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <div class="contact-wrapper">
+            <div class="contact-header">
+                <h2>Get In Touch</h2>
+                <p>Let's talk about your sneaker needs</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <span class="material-icons">location_on</span>
+                        <h3>Visit Us</h3>
+                        <p>123 Sneaker Street</p>
+                        <p>Fashion District, NY 10001</p>
+                    </div>
+                    <div class="contact-card">
+                        <span class="material-icons">call</span>
+                        <h3>Call Us</h3>
+                        <p>+1 (234) 567-8900</p>
+                        <p>Mon-Fri, 9am-6pm</p>
+                    </div>
+                    <div class="contact-card">
+                        <span class="material-icons">mail</span>
+                        <h3>Email Us</h3>
+                        <p>hello@sneakerspot.com</p>
+                        <p>support@sneakerspot.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" required>
+                                <label>Your Name</label>
+                                <span class="material-icons">person</span>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" required>
+                                <label>Your Email</label>
+                                <span class="material-icons">email</span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <textarea required></textarea>
+                            <label>Your Message</label>
+                            <span class="material-icons">message</span>
+                        </div>
+                        <button type="submit" class="send-btn">
+                            <span class="default">Send Message</span>
+                            <span class="success">
+                                <span class="material-icons">check</span> Sent
+                            </span>
+                            <div class="loader"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="collection.js"></script>
+    <script>
+    function handleLogout() {
+        if (confirm('Do you want to logout?')) {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userName');
+            localStorage.removeItem('userEmail');
+            window.location.reload();
+        }
+    }
+
+    function checkAuthStatus() {
+        const loginBtn = document.getElementById('loginBtn');
+        const userAvatar = document.getElementById('userAvatar');
+        const userMenu = document.getElementById('userMenu');
+        const userInitial = document.querySelector('.user-initial');
+        const userNameDisplay = document.getElementById('userNameDisplay');
+        
+        if (localStorage.getItem('isLoggedIn')) {
+            loginBtn.style.display = 'none';
+            userAvatar.style.display = 'flex';
+            const name = localStorage.getItem('userName') || 'User';
+            
+            userInitial.textContent = name[0].toUpperCase();
+            userNameDisplay.textContent = name;
+            
+            // Toggle user menu on avatar click
+            userAvatar.onclick = function(e) {
+                e.stopPropagation();
+                userMenu.classList.toggle('active');
+            }
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!userAvatar.contains(e.target)) {
+                    userMenu.classList.remove('active');
+                }
+            });
+        } else {
+            loginBtn.style.display = 'block';
+            userAvatar.style.display = 'none';
+        }
+    }
+
+    // Run on page load
+    document.addEventListener('DOMContentLoaded', checkAuthStatus);
+</script>
+</body>
+</html>

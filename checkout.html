@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - SneakerSpot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <!-- ...existing navbar code... -->
+    </nav>
+
+    <main class="checkout-page">
+        <div class="checkout-container">
+            <div class="checkout-content">
+                <div class="shipping-section">
+                    <h2>Shipping Details</h2>
+                    <form id="shippingForm">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" id="fullName" required>
+                                <label>Full Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="email" required>
+                                <label>Email</label>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="address" required>
+                            <label>Address</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" id="city" required>
+                                <label>City</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="pincode" required>
+                                <label>PIN Code</label>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="tel" id="phone" required>
+                            <label>Phone Number</label>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="payment-section">
+                    <h2>Payment Method</h2>
+                    <div class="payment-options">
+                        <div class="payment-option active" data-method="card">
+                            <span class="material-icons">credit_card</span>
+                            <span>Credit/Debit Card</span>
+                        </div>
+                        <div class="payment-option" data-method="upi">
+                            <span class="material-icons">account_balance</span>
+                            <span>UPI</span>
+                        </div>
+                        <div class="payment-option" data-method="cod">
+                            <span class="material-icons">local_shipping</span>
+                            <span>Cash on Delivery</span>
+                        </div>
+                    </div>
+
+                    <div id="card-payment" class="payment-form active">
+                        <div id="card-element"></div>
+                        <div id="card-errors" class="error-message"></div>
+                    </div>
+
+                    <div id="upi-payment" class="payment-form">
+                        <div class="input-group">
+                            <input type="text" id="upiId" placeholder="Enter UPI ID">
+                            <label>UPI ID</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div id="orderItems"></div>
+                <div class="summary-total">
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span id="subtotal">₹0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Shipping</span>
+                        <span>₹99</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span id="total">₹0</span>
+                    </div>
+                </div>
+                <button id="payButton" class="pay-btn">Pay Now</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
