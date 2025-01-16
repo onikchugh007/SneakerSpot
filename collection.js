@@ -5,9 +5,9 @@ const products = [
         price: 4999,
         images: {
             main: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff',
-            side: 'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519',
-            top: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a',
-            back: 'https://images.unsplash.com/photo-1584735175315-9d5df23d2800'
+            side: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff',
+            top: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff',
+            back: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff'
         },
         sizes: [7, 8, 9, 10, 11]
     },
@@ -190,8 +190,148 @@ const products = [
             back: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86'
         },
         sizes: [6, 7, 8, 9, 10]
+    },
+    {
+        id: 17,
+        name: 'Nike Air Jordan 4',
+        price: 13999,
+        images: {
+            main: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a',
+            side: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a',
+            top: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a',
+            back: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a'
+        },
+        sizes: [7, 8, 9, 10, 11]
+    },
+    {
+        id: 18,
+        name: 'Nike Dunk Low',
+        price: 8999,
+        images: {
+            main: 'https://images.unsplash.com/photo-1612015670817-0127d21628d4',
+            side: 'https://images.unsplash.com/photo-1612015670817-0127d21628d4',
+            top: 'https://images.unsplash.com/photo-1612015670817-0127d21628d4',
+            back: 'https://images.unsplash.com/photo-1612015670817-0127d21628d4'
+        },
+        sizes: [6, 7, 8, 9, 10]
+    },
+    {
+        id: 19,
+        name: 'Adidas Forum Low',
+        price: 7499,
+        images: {
+            main: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f',
+            side: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f',
+            top: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f',
+            back: 'https://images.unsplash.com/photo-1518002171953-a080ee817e1f'
+        },
+        sizes: [7, 8, 9, 10]
+    },
+    {
+        id: 20,
+        name: 'Nike SB Zoom',
+        price: 6999,
+        images: {
+            main: 'https://images.unsplash.com/photo-1580902394724-b08ff9ba7e8a',
+            side: 'https://images.unsplash.com/photo-1580902394724-b08ff9ba7e8a',
+            top: 'https://images.unsplash.com/photo-1580902394724-b08ff9ba7e8a',
+            back: 'https://images.unsplash.com/photo-1580902394724-b08ff9ba7e8a'
+        },
+        sizes: [6, 7, 8, 9, 10, 11]
+    },
+    {
+        id: 21,
+        name: 'Puma Slipstream',
+        price: 5999,
+        images: {
+            main: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5',
+            side: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5',
+            top: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5',
+            back: 'https://images.unsplash.com/photo-1608231387042-66d1773070a5'
+        },
+        sizes: [7, 8, 9, 10]
     }
 ];
+
+// Add these new products to the existing products array
+const additionalProducts = [
+    {
+        id: 22,
+        name: 'Nike Air Huarache',
+        price: 9499,
+        images: {
+            main: 'https://images.unsplash.com/photo-1551116198-01d550c9809c',
+            side: 'https://images.unsplash.com/photo-1551116198-01d550c9809c',
+            top: 'https://images.unsplash.com/photo-1551116198-01d550c9809c',
+            back: 'https://images.unsplash.com/photo-1551116198-01d550c9809c'
+        },
+        sizes: [7, 8, 9, 10, 11]
+    },
+    {
+        id: 23,
+        name: 'Adidas ZX 750',
+        price: 6799,
+        images: {
+            main: 'https://images.unsplash.com/photo-1544441893-675973e31985',
+            side: 'https://images.unsplash.com/photo-1544441893-675973e31985',
+            top: 'https://images.unsplash.com/photo-1544441893-675973e31985',
+            back: 'https://images.unsplash.com/photo-1544441893-675973e31985'
+        },
+        sizes: [6, 7, 8, 9, 10]
+    },
+    {
+        id: 24,
+        name: 'Puma Suede Classic',
+        price: 5299,
+        images: {
+            main: 'https://images.unsplash.com/photo-1512374382149-233c42b6a83b',
+            side: 'https://images.unsplash.com/photo-1512374382149-233c42b6a83b',
+            top: 'https://images.unsplash.com/photo-1512374382149-233c42b6a83b',
+            back: 'https://images.unsplash.com/photo-1512374382149-233c42b6a83b'
+        },
+        sizes: [7, 8, 9, 10]
+    },
+    // Add more sneakers with unique IDs from 25-41
+    {
+        id: 25,
+        name: 'Nike React Vision',
+        price: 11999,
+        images: {
+            main: 'https://images.unsplash.com/photo-1582588678413-dbf45f4823e9',
+            side: 'https://images.unsplash.com/photo-1582588678413-dbf45f4823e9',
+            top: 'https://images.unsplash.com/photo-1582588678413-dbf45f4823e9',
+            back: 'https://images.unsplash.com/photo-1582588678413-dbf45f4823e9'
+        },
+        sizes: [7, 8, 9, 10, 11]
+    },
+    // ... Continue adding more products with different images and details
+    {
+        id: 41,
+        name: 'Reebok Zig Kinetica',
+        price: 8499,
+        images: {
+            main: 'https://images.unsplash.com/photo-1465877783223-4eba513e27c6',
+            side: 'https://images.unsplash.com/photo-1465877783223-4eba513e27c6',
+            top: 'https://images.unsplash.com/photo-1465877783223-4eba513e27c6',
+            back: 'https://images.unsplash.com/photo-1465877783223-4eba513e27c6'
+        },
+        sizes: [7, 8, 9, 10]
+    }
+];
+
+// Add new products to the existing products array
+products.push(...additionalProducts);
+
+// Find and update product with ID 23
+const productToUpdate = products.find(p => p.id === 23);
+if (productToUpdate) {
+    productToUpdate.images = {
+        main: 'https://images.unsplash.com/photo-1544441893-675973e31985',
+        side: 'https://images.unsplash.com/photo-1579338559194-a162d19bf842',
+        top: 'https://images.unsplash.com/photo-1587563871167-1ee9c731aefb',
+        back: 'https://images.unsplash.com/photo-1607522370275-f14206abe5d3'
+    };
+}
 
 const cart = {
     items: [],
@@ -416,4 +556,61 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
 // Cart popup toggle
 document.querySelector('.cart-icon').addEventListener('click', () => {
     document.getElementById('cartPopup').classList.toggle('active');
+});
+
+// Add price range filter functionality
+document.getElementById('priceRange').addEventListener('input', function(e) {
+    const maxPrice = this.value;
+    document.getElementById('priceValue').textContent = maxPrice;
+    
+    const filtered = products.filter(product => product.price <= maxPrice);
+    displayProducts(filtered);
+});
+
+// Update filter functionality to work with both brand and price filters
+function applyFilters() {
+    const selectedBrand = document.getElementById('brandFilter').value;
+    const maxPrice = document.getElementById('priceRange').value;
+    const sortBy = document.getElementById('priceFilter').value;
+    
+    let filtered = products.filter(product => {
+        const matchesBrand = selectedBrand === 'all' || product.name.toLowerCase().includes(selectedBrand);
+        const matchesPrice = product.price <= maxPrice;
+        return matchesBrand && matchesPrice;
+    });
+    
+    // Apply sorting
+    switch(sortBy) {
+        case 'highToLow':
+            filtered.sort((a, b) => b.price - a.price);
+            break;
+        case 'lowToHigh':
+            filtered.sort((a, b) => a.price - b.price);
+            break;
+    }
+    
+    displayProducts(filtered);
+}
+
+// Update event listeners
+document.getElementById('brandFilter').addEventListener('change', applyFilters);
+document.getElementById('priceFilter').addEventListener('change', applyFilters);
+document.getElementById('priceRange').addEventListener('input', applyFilters);
+
+// Update price range input handling
+document.getElementById('priceRange').addEventListener('input', function(e) {
+    const value = this.value;
+    document.getElementById('priceValue').value = value;
+    document.getElementById('minPrice').value = 0;
+    applyFilters();
+});
+
+document.getElementById('priceValue').addEventListener('change', function(e) {
+    let value = parseInt(this.value);
+    if (isNaN(value)) value = 0;
+    if (value > 20000) value = 20000;
+    if (value < 0) value = 0;
+    this.value = value;
+    document.getElementById('priceRange').value = value;
+    applyFilters();
 });

@@ -33,23 +33,36 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
 }
 
 .payment-option {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 1rem;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
     cursor: pointer;
     transition: all 0.3s;
-    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.payment-option:hover {
+    background: rgba(255, 51, 102, 0.1);
+    border-color: var(--primary);
 }
 
 .payment-option.active {
-    background: var(--primary);
+    background: rgba(255, 51, 102, 0.1);
+    border-color: var(--primary);
+}
+
+.payment-option .material-icons {
+    font-size: 2rem;
+    color: var(--primary);
 }
 
 .payment-form {

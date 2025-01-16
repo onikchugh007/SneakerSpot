@@ -38,7 +38,19 @@ function loadCartItems() {
 
 function updateSummary(subtotal) {
     document.getElementById('subtotal').textContent = `₹${subtotal}`;
-    document.getElementById('total').textContent = `₹${subtotal + 99}`; // Adding shipping cost
+    
+    // Update shipping and total based on subtotal
+    const shipping = subtotal === 0 ? 0 : 99;
+    document.getElementById('total').textContent = `₹${subtotal + shipping}`;
+    document.querySelector('.summary-item:nth-child(2) span:last-child').textContent = `₹${shipping}`;
+    
+    // Handle checkout button state
+    const checkoutBtn = document.querySelector('.checkout-btn');
+    if (subtotal === 0) {
+        checkoutBtn.setAttribute('disabled', 'true');
+    } else {
+        checkoutBtn.removeAttribute('disabled');
+    }
 }
 
 function calculateTotal(items) {
@@ -74,5 +86,5 @@ document.querySelector('.checkout-btn').addEventListener('click', () => {
         window.location.href = 'login.html';
         return;
     }
-    window.location.href = 'payment.html';
+    window.location.href = 'checkout.html'; // Changed from payment.html to checkout.html
 });

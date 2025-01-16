@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Payment - SneakerSpot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="transaction.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="transaction-container">
+        <div class="payment-box">
+            <div class="payment-header">
+                <h2>Complete Payment</h2>
+                <div class="amount-display">
+                    <span>Amount to Pay</span>
+                    <h3>₹<span id="payAmount">0</span></h3>
+                </div>
+            </div>
+
+            <div id="cardPayment" class="payment-form">
+                <div class="card-preview">
+                    <div class="card-front">
+                        <span id="cardNumberPreview">•••• •••• •••• ••••</span>
+                        <div class="card-details">
+                            <span id="cardNamePreview">CARD HOLDER</span>
+                            <span id="cardExpiryPreview">MM/YY</span>
+                        </div>
+                    </div>
+                </div>
+                <form id="cardForm" class="card-form">
+                    <div class="input-group">
+                        <input type="text" id="cardNumber" required maxlength="19">
+                        <label>Card Number</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="cardName" required>
+                        <label>Name on Card</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <input type="text" id="cardExpiry" required maxlength="5">
+                            <label>Expiry (MM/YY)</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" id="cardCvv" required maxlength="3">
+                            <label>CVV</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="pay-btn">Pay Now</button>
+                </form>
+            </div>
+
+            <div id="upiPayment" class="payment-form" style="display: none;">
+                <div class="upi-options">
+                    <div class="upi-apps">
+                        <button class="upi-app-btn" data-app="gpay">
+                            <img src="assets/gpay.png" alt="Google Pay">
+                            <span>Google Pay</span>
+                        </button>
+                        <button class="upi-app-btn" data-app="phonepe">
+                            <img src="assets/phonepe.png" alt="PhonePe">
+                            <span>PhonePe</span>
+                        </button>
+                        <button class="upi-app-btn" data-app="paytm">
+                            <img src="assets/paytm.png" alt="Paytm">
+                            <span>Paytm</span>
+                        </button>
+                    </div>
+                    <div class="upi-divider">or</div>
+                    <form id="upiForm">
+                        <div class="input-group">
+                            <input type="text" id="upiId" required>
+                            <label>Enter UPI ID</label>
+                        </div>
+                        <button type="submit" class="pay-btn">Pay Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="transaction.js"></script>
+</body>
+</html>

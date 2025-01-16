@@ -940,3 +940,203 @@ html {
 }
 
 /* ...existing code... */
+
+.featured-brands {
+    padding: 6rem 2rem;
+    background: #222;
+}
+
+.featured-brands h2,
+.new-arrivals h2,
+.benefits h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand-card {
+    position: relative;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.brand-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.brand-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.brand-card:hover .brand-overlay {
+    opacity: 1;
+}
+
+.brand-card:hover img {
+    transform: scale(1.1);
+}
+
+.brand-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.brand-btn:hover {
+    transform: translateY(-2px);
+}
+
+.new-arrivals {
+    padding: 6rem 2rem;
+    background: var(--dark);
+}
+
+.arrivals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.arrival-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.arrival-tag {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.arrival-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #2a2a2a;
+    transition: opacity 0.3s ease;
+}
+
+.arrival-card img[src=""] {
+    opacity: 0;
+}
+
+.arrival-details {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.arrival-price {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.arrival-btn {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.arrival-btn:hover {
+    transform: translateY(-2px);
+}
+
+.benefits {
+    padding: 6rem 2rem;
+    background: #222;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+}
+
+.benefit-card .material-icons {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ...existing code... */
+
+.arrivalsSwiper {
+    padding: 2rem 1rem;
+}
+
+.arrivalsSwiper .swiper-button-next,
+.arrivalsSwiper .swiper-button-prev {
+    color: var(--primary);
+}
+
+.arrivalsSwiper .swiper-pagination-bullet {
+    background: var(--primary);
+}
+
+.arrivalsSwiper .swiper-pagination-bullet-active {
+    background: var(--primary);
+}
+
+/* ...rest of existing code... */

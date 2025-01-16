@@ -73,13 +73,40 @@
 
     <main class="collection-container">
         <div class="filters">
-            <h3>Sort By</h3>
-            <select id="priceFilter">
-                <option value="all">All Products</option>
-                <option value="newArrivals">What's New</option>
-                <option value="highToLow">Price: High to Low</option>
-                <option value="lowToHigh">Price: Low to High</option>
-            </select>
+            <div class="filter-group">
+                <h3>Sort By</h3>
+                <select id="priceFilter">
+                    <option value="all">All Products</option>
+                    <option value="newArrivals">What's New</option>
+                    <option value="highToLow">Price: High to Low</option>
+                    <option value="lowToHigh">Price: Low to High</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <h3>Featured Brands</h3>
+                <select id="brandFilter">
+                    <option value="all">All Brands</option>
+                    <option value="nike">Nike</option>
+                    <option value="adidas">Adidas</option>
+                    <option value="puma">Puma</option>
+                    <option value="newBalance">New Balance</option>
+                    <option value="reebok">Reebok</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <h3>Price Range</h3>
+                <div class="price-range">
+                    <div class="price-box">
+                        <span>₹</span>
+                        <input type="number" id="minPrice" value="0" min="0" max="20000" readonly>
+                    </div>
+                    <input type="range" id="priceRange" min="0" max="20000" step="1000" value="20000">
+                    <div class="price-box">
+                        <span>₹</span>
+                        <input type="number" id="priceValue" value="20000" min="0" max="20000">
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="collection-grid" id="collectionGrid">

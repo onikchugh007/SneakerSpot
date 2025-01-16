@@ -54,7 +54,7 @@
                 <div class="payment-section">
                     <h2>Payment Method</h2>
                     <div class="payment-options">
-                        <div class="payment-option active" data-method="card">
+                        <div class="payment-option" data-method="card">
                             <span class="material-icons">credit_card</span>
                             <span>Credit/Debit Card</span>
                         </div>
@@ -67,19 +67,8 @@
                             <span>Cash on Delivery</span>
                         </div>
                     </div>
-
-                    <div id="card-payment" class="payment-form active">
-                        <div id="card-element"></div>
-                        <div id="card-errors" class="error-message"></div>
-                    </div>
-
-                    <div id="upi-payment" class="payment-form">
-                        <div class="input-group">
-                            <input type="text" id="upiId" placeholder="Enter UPI ID">
-                            <label>UPI ID</label>
-                        </div>
-                    </div>
                 </div>
+
             </div>
 
             <div class="order-summary">
@@ -98,8 +87,8 @@
                         <span>Total</span>
                         <span id="total">₹0</span>
                     </div>
+                    <button id="payButton" class="pay-btn">Pay Now</button>
                 </div>
-                <button id="payButton" class="pay-btn">Pay Now</button>
             </div>
         </div>
     </main>
